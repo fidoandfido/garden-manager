@@ -4,6 +4,9 @@
 /dist
 /tmp
 /out-tsc
+/wwwroot
+/obj
+/bin
 
 # dependencies
 /node_modules
@@ -16,6 +19,8 @@
 *.launch
 .settings/
 *.sublime-workspace
+.vs/
+
 
 # IDE - VSCode
 .vscode/*
