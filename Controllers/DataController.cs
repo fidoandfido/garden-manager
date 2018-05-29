@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,9 +13,13 @@ namespace garden_manager.Controllers
     {
         // GET: api/Data
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<dynamic> Get()
         {
-            return new string[] { "value1", "value2" };
+            var returnData = new dynamic[] {
+                new { Id = 1, value = "val1" },
+                new { Id = 2, value = "val2" }
+            };
+            return returnData;
         }
 
         // GET: api/Data/5
