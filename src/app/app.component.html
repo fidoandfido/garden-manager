@@ -3,15 +3,23 @@
 <div class="container-fluid">
   <div class="row">
     <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-      <ul class="nav flex-column">
+      <ul *ngIf="!loggedIn" class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLinkActive="active" routerLink="/home">Home</a>
+          <a class="nav-link" href="#" routerLinkActive="active" routerLink="/home">Log in</a>
         </li>
+      </ul>
+      <ul *ngIf="loggedIn" class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link" href="#" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#" routerLinkActive="active" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#" routerLinkActive="active" routerLink="/data">Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link mr-md-2" (click)="logout()" href="#">Logoff</a>
         </li>
       </ul>
     </nav>
